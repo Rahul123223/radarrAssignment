@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./home.css"
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <ul>
         <Link to="/books">
           <li>Books</li>

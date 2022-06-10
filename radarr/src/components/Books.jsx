@@ -9,7 +9,7 @@ export default function Books() {
     const response = await axios.get(
       "https://www.anapioficeandfire.com/api/books?pageSize=30"
     );
-    console.log(response)
+    console.log(response);
 
     setBooks(response.data);
   };
@@ -33,7 +33,7 @@ export default function Books() {
           books.map((book, index) => {
             const cleanedDate = new Date(book.released).toDateString();
             const authors = book.authors.join(", ");
-            const povChar = book.povCharacters.join(",")
+            const povChar = book.povCharacters.join(",");
 
             return (
               <div className="book" key={index}>
@@ -43,7 +43,7 @@ export default function Books() {
                 <div className="details">
                   <p>{authors}</p>
                   <p>{book.numberOfPages} pages</p>
-                  <p>🏘{book.country}</p>
+                  <p>{book.country}</p>
                   <p>{cleanedDate}</p>
                   <p>{book.mediaType}</p>
                 </div>
